@@ -1,24 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1">
-    <title>IT 3203 - History of HTML</title>
-    <style>
-        body {
-            font-family: Georgia, serif;
-            margin: 20px;
-            background: linear-gradient(to right, #87CEEB, #00008B); /* LightBlue to DarkBlue */
-            color: #333;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-    </style>
-</head>    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>IT 3203 - History of HTML</title>
+        <style>
+            /* Base Styles */
+            body {
+                font-family: Georgia, serif;
+                margin: 0; 
+                padding: 0;
+                background: linear-gradient(to right, #87CEEB, #00008B);
+                color: yellow;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            h1, h2, h3, h4, h5, h6 {
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+    
+            nav, section {
+                width: 90%;
+                max-width: 1200px; 
+                margin-bottom: 30px;
+            }
+    
+            /* Navigation Styles */
+            nav {
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 15px;
+                border-radius: 8px;
+                width: 100%;
+            }
+    
+            nav h1 {
+                text-align: center;
+            }
+    
+            ul {
+                padding: 0;
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+    
+            ul li {
+                margin: 10px;
+            }
+    
+            a {
+                color: yellow;
+                text-decoration: underline;
+                font-size: 1.1rem;
+            }
+    
+            /* Section Styles */
+            section {
+                padding: 20px;
+                text-align: center;
+            }
+    
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                margin-bottom: 20px;
+            }
+    
+            /* Form Styling */
+            form input[type="text"], form button {
+                padding: 10px;
+                font-size: 1rem;
+                border: none;
+                border-radius: 8px;
+            }
+    
+            form button {
+                background-color: darkblue;
+                color: yellow;
+                cursor: pointer;
+            }
+    
+            form button:hover {
+                background-color: navy;
+            }
+    
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                nav {
+                    padding: 10px;
+                }
+    
+                ul {
+                    flex-direction: column;
+                    align-items: center;
+                }
+    
+                h1 {
+                    font-size: 1.5rem;
+                }
+    
+                section {
+                    width: 90%;
+                    text-align: center;
+                }
+    
+                img {
+                    max-width: 90%;
+                }
+    
+                /* Form Adjustments for smaller screens */
+                form input[type="text"], form button {
+                    width: 100%;
+                }
+            }
+    
+            @media (max-width: 480px) {
+                h1 {
+                    font-size: 1.3rem;
+                }
+    
+                h2 {
+                    font-size: 1rem;
+                }
+    
+                nav h1 {
+                    font-size: 1.2rem;
+                }
+    
+                nav ul {
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 20px;
+                }
+    
+                nav ul li {
+                    margin-bottom: 10px;
+                }
+    
+                img {
+                    max-width: 80%;
+                    margin-bottom: 15px;
+                }
+    
+                section {
+                    padding: 10px;
+                }
+    
+                form input[type="text"], form button {
+                    width: 100%;
+                    font-size: 1rem;
+                }
+            }
+    
+            /* Desktop (larger screen) adjustments */
+            @media (min-width: 1025px) {
+                nav ul {
+                    justify-content: flex-start;
+                    flex-direction: row;
+                }
+    
+                section {
+                    padding: 40px;
+                    text-align: left;
+                }
+            }
+            img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 5px solid yellow; /* Add a yellow border around the image */
+}
+        </style>
+    </head>
 <body>
     <nav>
         <h1><u> Contents</u></h1>

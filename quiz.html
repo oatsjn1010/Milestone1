@@ -1,24 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-    content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>IT 3203 - History of HTML</title>
     <style>
-      body {
-          font-family: Georgia, serif;
-          margin: 20px;
-          background: linear-gradient(to right, #87CEEB, #00008B); /* LightBlue to DarkBlue */
-          color: #333;
-      }
+        /* Base Styles */
+        body {
+            font-family: Georgia, serif;
+            margin: 0; 
+            padding: 0;
+            background: linear-gradient(to right, #87CEEB, #00008B);
+            color: yellow;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-      h1, h2, h3, h4, h5, h6 {
-          font-weight: bold;
-          margin-bottom: 15px;
-      }
-  </style>
-</head>    
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        nav, section {
+            width: 90%;
+            max-width: 1200px; 
+            margin-bottom: 30px;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            border-radius: 8px;
+            width: 100%;
+        }
+
+        nav h1 {
+            text-align: center;
+        }
+
+        ul {
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        ul li {
+            margin: 10px;
+        }
+
+        a {
+            color: yellow;
+            text-decoration: underline;
+            font-size: 1.1rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Form Styling */
+        form input[type="text"], form button {
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 8px;
+        }
+
+        form button {
+            background-color: darkblue;
+            color: yellow;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: navy;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                padding: 10px;
+            }
+
+            ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            section {
+                width: 90%;
+                text-align: center;
+            }
+
+            img {
+                max-width: 90%;
+            }
+
+            /* Form Adjustments for smaller screens */
+            form input[type="text"], form button {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.3rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            nav h1 {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+            }
+
+            img {
+                max-width: 80%;
+                margin-bottom: 15px;
+            }
+
+            section {
+                padding: 10px;
+            }
+
+            form input[type="text"], form button {
+                width: 100%;
+                font-size: 1rem;
+            }
+        }
+
+        /* Desktop (larger screen) adjustments */
+        @media (min-width: 1025px) {
+            nav ul {
+                justify-content: flex-start;
+                flex-direction: row;
+            }
+
+            section {
+                padding: 40px;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
 <body>
     <nav>
         <h1><u> Contents</u></h1>
@@ -36,117 +189,151 @@
     <section>
         <h1><u>HTML Self-Assessment Quiz</u></h1>
 
-<form id="quizForm">
-  <div class="question">
-    <p>1. What does HTML stand for?</p>
-    <label><input type="radio" name="q1" value="a"> Hyper Trainer Marking Language</label><br>
-    <label><input type="radio" name="q1" value="b"> Hyper Text Markup Language</label><br>
-    <label><input type="radio" name="q1" value="c"> HyperText Machine Language</label>
-  </div>
-
-  <div class="question">
-    <p>2. Who invented HTML?</p>
-    <label><input type="radio" name="q2" value="a"> Elon Musk</label><br>
-    <label><input type="radio" name="q2" value="b"> Bill Gates</label><br>
-    <label><input type="radio" name="q2" value="c"> Tim Berners-Lee</label>
-  </div>
-
-  <div class="question">
-    <p>3. Which tag is used to create a hyperlink in HTML?</p>
-    <label><input type="radio" name="q3" value="a">&lt;link&gt;</label><br>
-    <label><input type="radio" name="q3" value="b">&lt;a&gt;</label><br>
-    <label><input type="radio" name="q3" value="c">&lt;href&gt;</label>
-  </div>
-
-  <div class="question">
-    <p>4. Fill in the blank: The standard file extension for an HTML document is <input type="text" name="q4" placeholder="Your answer here">.</p>
-  </div>
-
-  <div class="question">
-    <p>5. Which of the following are valid HTML elements? (Choose all that apply)</p>
-    <label><input type="checkbox" name="q5" value="a">&lt;p&gt;</label><br>
-    <label><input type="checkbox" name="q5" value="b">&lt;div&gt;</label><br>
-    <label><input type="checkbox" name="q5" value="c">&lt;section&gt;</label><br>
-    <label><input type="checkbox" name="q5" value="d">&lt;slide&gt;</label>
-  </div>
-
-  <button type="button" onclick="submitQuiz()">Submit</button>
-  <button type="button" onclick="resetQuiz()">Restart</button>
-</form>
-
-<div class="results" id="results"></div>
-
-<script>
-  function submitQuiz() {
-    let score = 0;
-    let output = '';
-    const total = 5;
-
-    // Question 1
-    const q1 = document.querySelector('input[name="q1"]:checked');
-    const ans1 = q1 ? q1.value : '';
-    if (ans1 === 'b') {
-      score++;
-      output += '<p class="correct">Q1 Correct</p>';
-    } else {
-      output += '<p class="incorrect">Q1 Incorrect (Correct: b - Hyper Text Markup Language)</p>';
-    }
-
-    // Question 2
-    const q2 = document.querySelector('input[name="q2"]:checked');
-    const ans2 = q2 ? q2.value : '';
-    if (ans2 === 'c') {
-      score++;
-      output += '<p class="correct">Q2 Correct</p>';
-    } else {
-      output += '<p class="incorrect">Q2 Incorrect (Correct: c - Tim Berners-Lee)</p>';
-    }
-
-    // Question 3
-    const q3 = document.querySelector('input[name="q3"]:checked');
-    const ans3 = q3 ? q3.value : '';
-    if (ans3 === 'b') {
-      score++;
-      output += '<p class="correct">Q3 Correct</p>';
-    } else {
-      output += '<p class="incorrect">Q3 Incorrect (Correct: b - &lt;a&gt;)</p>';
-    }
-
-    // Question 4
-    const q4 = document.querySelector('input[name="q4"]').value.trim().toLowerCase();
-    if (q4 === 'html' || q4 === '.html') {
-      score++;
-      output += '<p class="correct">Q4 Correct</p>';
-    } else {
-      output += '<p class="incorrect">Q4 Incorrect (Correct: .html)</p>';
-    }
-
-    // Question 5
-    const q5 = document.querySelectorAll('input[name="q5"]:checked');
-    const correctAnswers = ['a', 'b', 'c'];
-    const selected = Array.from(q5).map(cb => cb.value);
-    const isCorrect = correctAnswers.every(val => selected.includes(val)) && selected.every(val => correctAnswers.includes(val));
-    if (isCorrect) {
-      score++;
-      output += '<p class="correct">Q5 Correct</p>';
-    } else {
-      output += '<p class="incorrect">Q5 Incorrect (Correct: &lt;p&gt;, &lt;div&gt;, &lt;section&gt;)</p>';
-    }
-
-    const passFail = score >= 4 ? '<strong style="color:green;">PASS</strong>' : '<strong style="color:red;">FAIL</strong>';
-    document.getElementById('results').innerHTML = `
-      <h2>Your Results</h2>
-      ${output}
-      <p><strong>Total Score: ${score} / ${total}</strong></p>
-      <p>Result: ${passFail}</p>
-    `;
-  }
-
-  function resetQuiz() {
-    document.getElementById('quizForm').reset();
-    document.getElementById('results').innerHTML = '';
-  }
-</script>
-
-</body>
-</html>
+        <form id="quizForm">
+          <!-- MULTIPLE CHOICE (Single Answer) -->
+          <div class="question">
+            <p>1. Who invented HTML?</p>
+            <label><input type="radio" name="q1" value="Tim Berners-Lee"> Tim Berners-Lee</label><br>
+            <label><input type="radio" name="q1" value="Bill Gates"> Bill Gates</label><br>
+            <label><input type="radio" name="q1" value="Elon Musk"> Elon Musk</label>
+          </div>
+      
+          <div class="question">
+            <p>2. What does HTML stand for?</p>
+            <label><input type="radio" name="q2" value="Hyper Text Markup Language"> Hyper Text Markup Language</label><br>
+            <label><input type="radio" name="q2" value="Home Tool Markup Language"> Home Tool Markup Language</label><br>
+            <label><input type="radio" name="q2" value="Hyperlinks and Text Markup Language"> Hyperlinks and Text Markup Language</label>
+          </div>
+      
+          <div class="question">
+            <p>3. In which year was HTML first developed?</p>
+            <label><input type="radio" name="q3" value="1991"> 1991</label><br>
+            <label><input type="radio" name="q3" value="1995"> 1995</label><br>
+            <label><input type="radio" name="q3" value="2000"> 2000</label>
+          </div>
+      
+          <div class="question">
+            <p>4. Who maintains the HTML standard today?</p>
+            <label><input type="radio" name="q4" value="W3C"> W3C</label><br>
+            <label><input type="radio" name="q4" value="NASA"> NASA</label><br>
+            <label><input type="radio" name="q4" value="Google"> Google</label>
+          </div>
+      
+          <div class="question">
+            <p>5. What is the latest major version of HTML called?</p>
+            <label><input type="radio" name="q5" value="HTML5"> HTML5</label><br>
+            <label><input type="radio" name="q5" value="HTML4.1"> HTML4.1</label><br>
+            <label><input type="radio" name="q5" value="HTML6"> HTML6</label>
+          </div>
+      
+          <!-- FILL IN THE BLANK -->
+          <div class="question">
+            <p>6. Fill in the blank: The file extension for HTML files is <input type="text" name="q6" placeholder="Your answer here">.</p>
+          </div>
+      
+          <div class="question">
+            <p>7. Fill in the blank: The tag used to create a hyperlink is <input type="text" name="q7" placeholder="Your answer here">.</p>
+          </div>
+      
+          <div class="question">
+            <p>8. Fill in the blank: The tag used to insert an image is <input type="text" name="q8" placeholder="Your answer here">.</p>
+          </div>
+      
+          <!-- MULTIPLE ANSWER (Checkbox) -->
+          <div class="question">
+            <p>9. Which of the following are valid HTML5 elements? (Choose all that apply)</p>
+            <label><input type="checkbox" name="q9" value="section"> &lt;section&gt;</label><br>
+            <label><input type="checkbox" name="q9" value="article"> &lt;article&gt;</label><br>
+            <label><input type="checkbox" name="q9" value="blink"> &lt;blink&gt;</label><br>
+            <label><input type="checkbox" name="q9" value="footer"> &lt;footer&gt;</label>
+          </div>
+      
+          <div class="question">
+            <p>10. Which are container elements in HTML? (Choose all that apply)</p>
+            <label><input type="checkbox" name="q10" value="div"> &lt;div&gt;</label><br>
+            <label><input type="checkbox" name="q10" value="span"> &lt;span&gt;</label><br>
+            <label><input type="checkbox" name="q10" value="img"> &lt;img&gt;</label><br>
+            <label><input type="checkbox" name="q10" value="p"> &lt;p&gt;</label>
+          </div>
+      
+          <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+          <button type="button" onclick="resetQuiz()">Restart Quiz</button>
+        </form>
+      
+        <div id="results" class="results"></div>
+      </section>
+      
+      <script>
+      function submitQuiz() {
+        let score = 0;
+        let output = '';
+        const correctAnswers = {
+          q1: 'Tim Berners-Lee',
+          q2: 'Hyper Text Markup Language',
+          q3: '1991',
+          q4: 'W3C',
+          q5: 'HTML5',
+          q6: 'html',
+          q7: 'a',
+          q8: 'img',
+          q9: ['section', 'article', 'footer'],
+          q10: ['div', 'span', 'p']
+        };
+      
+        // Multiple choice questions
+        for (let i = 1; i <= 5; i++) {
+          const selected = document.querySelector(`input[name="q${i}"]:checked`);
+          if (selected) {
+            if (selected.value === correctAnswers[`q${i}`]) {
+              score++;
+              output += `<p>Question ${i}: Correct ✅ (${selected.value})</p>`;
+            } else {
+              output += `<p>Question ${i}: Wrong ❌ (Your answer: ${selected.value}; Correct: ${correctAnswers[`q${i}`]})</p>`;
+            }
+          } else {
+            output += `<p>Question ${i}: No Answer ❌ (Correct: ${correctAnswers[`q${i}`]})</p>`;
+          }
+        }
+      
+        // Fill-in-the-blank questions
+        for (let i = 6; i <= 8; i++) {
+          const input = document.querySelector(`input[name="q${i}"]`).value.trim().toLowerCase();
+          if (input === correctAnswers[`q${i}`]) {
+            score++;
+            output += `<p>Question ${i}: Correct ✅ (${input})</p>`;
+          } else {
+            output += `<p>Question ${i}: Wrong ❌ (Your answer: ${input}; Correct: ${correctAnswers[`q${i}`]})</p>`;
+          }
+        }
+      
+        // Multiple answer questions
+        for (let i = 9; i <= 10; i++) {
+          const selected = Array.from(document.querySelectorAll(`input[name="q${i}"]:checked`)).map(cb => cb.value);
+          const correct = correctAnswers[`q${i}`];
+          const allCorrect = correct.every(ans => selected.includes(ans)) && selected.every(ans => correct.includes(ans));
+          if (allCorrect) {
+            score++;
+            output += `<p>Question ${i}: Correct ✅ (${selected.join(', ')})</p>`;
+          } else {
+            output += `<p>Question ${i}: Wrong ❌ (Your answers: ${selected.join(', ')}; Correct: ${correct.join(', ')})</p>`;
+          }
+        }
+      
+        const passFail = score >= 7 ? '<strong style="color:lime;">PASS</strong>' : '<strong style="color:red;">FAIL</strong>';
+      
+        document.getElementById('results').innerHTML = `
+          <h2>Your Results</h2>
+          <p><strong>Total Score: ${score} / 10</strong></p>
+          <p><strong>Result: ${passFail}</strong></p>
+          ${output}
+        `;
+      }
+      
+      function resetQuiz() {
+        document.getElementById('quizForm').reset();
+        document.getElementById('results').innerHTML = '';
+      }
+      </script>
+      
+      </body>
+      </html>
